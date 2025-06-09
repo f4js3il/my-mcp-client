@@ -1,0 +1,22 @@
+spring:
+  application:
+   name: my-mcp-client
+  ai:
+    bedrock:
+      aws:
+        region: us-east-2
+      converse:
+       chat:
+        options:
+          model: us.anthropic.claude-sonnet-4-20250514-v1:0
+    mcp:
+      client:
+        type: sync
+        sse:
+          connections:
+            server1:
+              url: http://localhost:50001
+        name: my-mcp-client
+
+server:
+  port: 50003
